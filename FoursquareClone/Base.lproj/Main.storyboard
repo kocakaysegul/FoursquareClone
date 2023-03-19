@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignUpVC" customModule="FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,6 +66,7 @@
                             <constraint firstItem="bsY-hY-3x1" firstAttribute="leading" secondItem="VlZ-Vd-g52" secondAttribute="leading" id="x9J-vU-ZsW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="99V-hQ-oQq"/>
                     <connections>
                         <outlet property="passwordText" destination="VlZ-Vd-g52" id="Vtr-vO-7sL"/>
                         <outlet property="usernameText" destination="bsY-hY-3x1" id="P8u-c4-CNC"/>
@@ -79,7 +80,7 @@
         <!--PlacesVC-->
         <scene sceneID="8F9-6u-POJ">
             <objects>
-                <viewController id="32x-ja-UKW" customClass="PlacesVC" customModule="FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="32x-ja-UKW" customClass="PlacesVC" customModule="FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Ew-wC-SQC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,16 +102,17 @@
                     <navigationItem key="navigationItem" id="yCK-Ah-Pth"/>
                     <connections>
                         <outlet property="tableView" destination="gQ9-T6-9rf" id="8BE-D8-Pce"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignUpVC" modalPresentationStyle="fullScreen" id="cjY-hm-cZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Tt-uv-UvG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961" y="-66"/>
+            <point key="canvasLocation" x="2062" y="-196"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UQX-pa-rEs">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Iw-ZT-VfA" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" id="5Iw-ZT-VfA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="elk-O6-Z9j"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tut-TF-brV">
