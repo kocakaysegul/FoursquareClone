@@ -16,6 +16,7 @@
 		D8924C1829C72011002322F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8924C1629C72011002322F2 /* LaunchScreen.storyboard */; };
 		D8924C2029C73714002322F2 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8924C1F29C73714002322F2 /* PlacesVC.swift */; };
 		D8924C2229C73F15002322F2 /* AddPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8924C2129C73F15002322F2 /* AddPlaceVC.swift */; };
+		D8924C2429C827AC002322F2 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8924C2329C827AC002322F2 /* MapVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D8924C1929C72011002322F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8924C1F29C73714002322F2 /* PlacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
 		D8924C2129C73F15002322F2 /* AddPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceVC.swift; sourceTree = "<group>"; };
+		D8924C2329C827AC002322F2 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				D8924C0F29C72010002322F2 /* SignUpVC.swift */,
 				D8924C1F29C73714002322F2 /* PlacesVC.swift */,
 				D8924C2129C73F15002322F2 /* AddPlaceVC.swift */,
+				D8924C2329C827AC002322F2 /* MapVC.swift */,
 				D8924C1129C72010002322F2 /* Main.storyboard */,
 				D8924C1429C72011002322F2 /* Assets.xcassets */,
 				D8924C1629C72011002322F2 /* LaunchScreen.storyboard */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8924C1029C72010002322F2 /* SignUpVC.swift in Sources */,
+				D8924C2429C827AC002322F2 /* MapVC.swift in Sources */,
 				D8924C0C29C72010002322F2 /* AppDelegate.swift in Sources */,
 				D8924C2029C73714002322F2 /* PlacesVC.swift in Sources */,
 				D8924C2229C73F15002322F2 /* AddPlaceVC.swift in Sources */,

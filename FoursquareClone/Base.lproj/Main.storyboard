@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -103,7 +104,7 @@
                     <connections>
                         <outlet property="tableView" destination="gQ9-T6-9rf" id="8BE-D8-Pce"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignUpVC" modalPresentationStyle="fullScreen" id="cjY-hm-cZx"/>
-                        <segue destination="SrJ-I6-Ykm" kind="show" id="UmM-Ct-QYh"/>
+                        <segue destination="SrJ-I6-Ykm" kind="show" identifier="toAddPlaceVC" id="UmM-Ct-QYh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Tt-uv-UvG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -187,11 +188,43 @@
                         <outlet property="placeImageView" destination="hSA-4G-kQ5" id="d7G-9f-Sr7"/>
                         <outlet property="placeNameText" destination="V3J-dK-aEm" id="lwZ-Ho-whA"/>
                         <outlet property="placeTypeText" destination="ypy-nj-ibJ" id="cqZ-w3-UsZ"/>
+                        <segue destination="rqg-jX-nf7" kind="presentation" identifier="toMapVC" modalPresentationStyle="fullScreen" id="svn-nZ-4Mp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGo-GZ-z8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1461.8320610687022" y="-61.267605633802823"/>
+        </scene>
+        <!--MapVC-->
+        <scene sceneID="eWn-W0-4fA">
+            <objects>
+                <viewController id="D3y-Q2-xUz" customClass="MapVC" customModule="FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ad2-uX-W5k">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAc-G0-i5O">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oat-vI-Mrd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xAc-G0-i5O" firstAttribute="leading" secondItem="oat-vI-Mrd" secondAttribute="leading" id="bio-Ru-JRA"/>
+                            <constraint firstItem="xAc-G0-i5O" firstAttribute="top" secondItem="oat-vI-Mrd" secondAttribute="top" id="jkP-L7-7qw"/>
+                            <constraint firstItem="oat-vI-Mrd" firstAttribute="bottom" secondItem="xAc-G0-i5O" secondAttribute="bottom" id="l9U-9Q-aBJ"/>
+                            <constraint firstItem="oat-vI-Mrd" firstAttribute="trailing" secondItem="xAc-G0-i5O" secondAttribute="trailing" id="nMN-4p-iA1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xzg-uH-hu9"/>
+                    <connections>
+                        <outlet property="mapView" destination="xAc-G0-i5O" id="BCF-1W-3mE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UeD-9N-pJf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3115.2671755725191" y="-61.267605633802823"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UQX-pa-rEs">
@@ -211,6 +244,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5w-e0-6mc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11" y="-61"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5P9-gf-Vm4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rqg-jX-nf7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="yeA-3M-9ay"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ob5-Vb-2iO">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="D3y-Q2-xUz" kind="relationship" relationship="rootViewController" id="8dW-ex-mCD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6DP-Fm-Jgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2188.5496183206105" y="-61.267605633802823"/>
         </scene>
     </scenes>
     <resources>
