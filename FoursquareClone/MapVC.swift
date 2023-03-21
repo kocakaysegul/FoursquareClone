@@ -8,9 +8,12 @@
 import UIKit
 import MapKit
 
-class MapVC: UIViewController {
+class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    
+    var locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,7 +22,20 @@ class MapVC: UIViewController {
         
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "< Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(backButtonClicked))
         
-        print(PlaceModel.sharedInstance.placeName)
+        //print(PlaceModel.sharedInstance.placeName)
+        mapView.delegate = self
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        locationManager.stopUpdatingLocation()
+        let location = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
+        let span = MKCoordinateSpan(latitudeDelta: 0.35, longitudeDelta: 0.35)
+        let region = MKCoordinateRegion(center: location, span: span)
+        mapView.setRegion(region, animated: true)
     }
     
     @objc func saveButtonClicked() {
@@ -30,14 +46,5 @@ class MapVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
