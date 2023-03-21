@@ -97,11 +97,11 @@
 				D8924C2129C73F15002322F2 /* AddPlaceVC.swift */,
 				D8924C2329C827AC002322F2 /* MapVC.swift */,
 				D8924C2529C9970A002322F2 /* DetailsVC.swift */,
+				D8924C2729C9ACAE002322F2 /* PlaceModel.swift */,
 				D8924C1129C72010002322F2 /* Main.storyboard */,
 				D8924C1429C72011002322F2 /* Assets.xcassets */,
 				D8924C1629C72011002322F2 /* LaunchScreen.storyboard */,
 				D8924C1929C72011002322F2 /* Info.plist */,
-				D8924C2729C9ACAE002322F2 /* PlaceModel.swift */,
 			);
 			path = FoursquareClone;
 			sourceTree = "<group>";
