@@ -112,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="744" y="-61"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailsVC-->
         <scene sceneID="i3U-pA-S5y">
             <objects>
-                <viewController id="fIz-Qc-NnX" sceneMemberID="viewController">
+                <viewController id="fIz-Qc-NnX" customClass="DetailsVC" customModule="FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kVh-GY-TVc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,6 +155,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="yyI-xY-GTj"/>
+                    <connections>
+                        <outlet property="detailsAtmosphereLabel" destination="uVY-5c-uSF" id="DfL-ek-e5H"/>
+                        <outlet property="detailsImageView" destination="9Yt-wI-avt" id="Njg-U8-Si1"/>
+                        <outlet property="detailsMapView" destination="1Mv-jk-uvZ" id="uvl-no-tZ2"/>
+                        <outlet property="detailsNameLabel" destination="4eS-fq-rw6" id="vxZ-Rr-DmH"/>
+                        <outlet property="detailsTypeLabel" destination="c0a-Nx-I5P" id="Ll6-L5-FSO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BX9-7T-pZT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
