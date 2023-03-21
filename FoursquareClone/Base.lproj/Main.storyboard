@@ -199,8 +199,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tap" translatesAutoresizingMaskIntoConstraints="NO" id="hSA-4G-kQ5">
-                                <rect key="frame" x="58" y="327" width="292" height="294"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tray.and.arrow.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hSA-4G-kQ5">
+                                <rect key="frame" x="58" y="325.66666666666669" width="292" height="295.00000000000006"/>
+                                <color key="tintColor" red="0.51938049119999996" green="0.52975761320000003" blue="0.65825603590000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="292" id="DZS-J3-7jQ"/>
                                     <constraint firstAttribute="height" constant="294" id="GQ9-lZ-1Me"/>
@@ -322,7 +323,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tap" width="212" height="237"/>
+        <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
