@@ -18,6 +18,7 @@
 		D8924C2229C73F15002322F2 /* AddPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8924C2129C73F15002322F2 /* AddPlaceVC.swift */; };
 		D8924C2429C827AC002322F2 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8924C2329C827AC002322F2 /* MapVC.swift */; };
 		D8924C2629C9970A002322F2 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8924C2529C9970A002322F2 /* DetailsVC.swift */; };
+		D8924C2829C9ACAE002322F2 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8924C2729C9ACAE002322F2 /* PlaceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D8924C2129C73F15002322F2 /* AddPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceVC.swift; sourceTree = "<group>"; };
 		D8924C2329C827AC002322F2 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		D8924C2529C9970A002322F2 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		D8924C2729C9ACAE002322F2 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				D8924C1429C72011002322F2 /* Assets.xcassets */,
 				D8924C1629C72011002322F2 /* LaunchScreen.storyboard */,
 				D8924C1929C72011002322F2 /* Info.plist */,
+				D8924C2729C9ACAE002322F2 /* PlaceModel.swift */,
 			);
 			path = FoursquareClone;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8924C1029C72010002322F2 /* SignUpVC.swift in Sources */,
+				D8924C2829C9ACAE002322F2 /* PlaceModel.swift in Sources */,
 				D8924C2429C827AC002322F2 /* MapVC.swift in Sources */,
 				D8924C0C29C72010002322F2 /* AppDelegate.swift in Sources */,
 				D8924C2029C73714002322F2 /* PlacesVC.swift in Sources */,
