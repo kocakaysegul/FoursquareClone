@@ -18,6 +18,8 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var detailsMapView: MKMapView!
     
     var chosenPlaceId = ""
+    var chosenLatitude = Double()
+    var chosenLongitude = Double()
     
     
     override func viewDidLoad() {
@@ -26,27 +28,57 @@ class DetailsVC: UIViewController {
         // Do any additional setup after loading the view.
         
         //print(chosenPlaceId)
+        getDataFromParse()
         
+    }
+    
+
+    func getDataFromParse() {
         let query = PFQuery(className: "Places")
         query.whereKey("objectId", equalTo: chosenPlaceId)
         query.findObjectsInBackground { objects, error in
             if error != nil {
                 
             } else {
-                print(objects)
+                if objects != nil {
+                    if objects!.count > 0 {
+                        let chosenPlaceObject = objects![0]
+                        
+                        if let placeName = chosenPlaceObject.object(forKey: "name") as? String {
+                            self.detailsNameLabel.text = placeName
+                        }
+                        if let placeType = chosenPlaceObject.object(forKey: "type") as? String {
+                            self.detailsTypeLabel.text = placeType
+                        }
+                        if let placeAtmosphere = chosenPlaceObject.object(forKey: "atmosphere") as? String {
+                            self.detailsAtmosphereLabel.text = placeAtmosphere
+                        }
+                        
+                        if let placeLatitude = chosenPlaceObject.object(forKey: "latitude") as? String {
+                            if let placeLatitudeDouble = Double(placeLatitude) {
+                                self.chosenLatitude = placeLatitudeDouble
+                            }
+                        }
+                        if let placeLongitude = chosenPlaceObject.object(forKey: "longitude") as? String {
+                            if let placeLongitudeDouble = Double(placeLongitude) {
+                                self.chosenLongitude = placeLongitudeDouble
+                            }
+                        }
+                        if let imageData = chosenPlaceObject.object(forKey: "image") as? PFFileObject {
+                            imageData.getDataInBackground { data, error in
+                                if error == nil {
+                                    if data != nil {
+                                        self.detailsImageView.image = UIImage(data: data!)
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
+                    }
+                }
             }
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
