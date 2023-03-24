@@ -104,7 +104,6 @@
                     <connections>
                         <outlet property="tableView" destination="gQ9-T6-9rf" id="8BE-D8-Pce"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignUpVC" modalPresentationStyle="fullScreen" id="cjY-hm-cZx"/>
-                        <segue destination="SrJ-I6-Ykm" kind="show" identifier="toAddPlaceVC" id="UmM-Ct-QYh"/>
                         <segue destination="fIz-Qc-NnX" kind="show" identifier="toDetailsVC" id="36D-04-aZm"/>
                     </connections>
                 </viewController>
@@ -172,7 +171,7 @@
             <objects>
                 <viewController id="SrJ-I6-Ykm" customClass="AddPlaceVC" customModule="FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m0f-xO-M0b">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="place name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V3J-dK-aEm">
@@ -200,7 +199,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tray.and.arrow.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hSA-4G-kQ5">
-                                <rect key="frame" x="58" y="281.66666666666669" width="292" height="295.00000000000006"/>
+                                <rect key="frame" x="58" y="281.66666666666669" width="292" height="21.333333333333314"/>
                                 <color key="tintColor" red="0.51938049119999996" green="0.52975761320000003" blue="0.65825603590000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="292" id="DZS-J3-7jQ"/>
@@ -208,7 +207,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMu-Mq-wgH">
-                                <rect key="frame" x="170" y="616" width="68" height="35"/>
+                                <rect key="frame" x="170" y="342.33333333333331" width="68" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="e6Z-27-gJH"/>
                                 </constraints>
@@ -277,7 +276,7 @@
                     <navigationItem key="navigationItem" id="xzg-uH-hu9"/>
                     <connections>
                         <outlet property="mapView" destination="xAc-G0-i5O" id="BCF-1W-3mE"/>
-                        <segue destination="32x-ja-UKW" kind="presentation" identifier="fromMapVCtoPlacesVC" modalPresentationStyle="fullScreen" id="n3x-zM-qkh"/>
+                        <segue destination="32x-ja-UKW" kind="presentation" identifier="fromMapVCtoPlacesVC" modalPresentationStyle="fullScreen" id="K6r-aW-10b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UeD-9N-pJf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -324,7 +323,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="n3x-zM-qkh"/>
+        <segue reference="K6r-aW-10b"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="115"/>
