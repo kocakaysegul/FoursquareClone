@@ -100,22 +100,27 @@ class DetailsVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if annotation is MKUserLocation {
-            return nil
-        }
-        let reuseId = "pin"
-        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-        if pinView == nil {
-            pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-            pinView?.canShowCallout =  true
+            if annotation is MKUserLocation {
+                return nil
+            }
             
-            let button = UIButton(type: UIButton.ButtonType.detailDisclosure)
-            pinView?.rightCalloutAccessoryView = button
-        } else {
-            pinView?.annotation = annotation
+            let reuseId = "pin"
+            
+            var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+        
+            if pinView == nil {
+                pinView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                pinView?.canShowCallout = true
+                let button = UIButton(type: .detailDisclosure)
+                pinView?.rightCalloutAccessoryView = button
+            } else {
+                pinView?.annotation = annotation
+            }
+            
+            return pinView
+            
         }
-        return pinView
-    }
+    
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
@@ -138,5 +143,6 @@ class DetailsVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
             }
         }
     }
+     
 
 }
